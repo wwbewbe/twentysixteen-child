@@ -47,7 +47,7 @@
 					 */
 					do_action( 'twentysixteen_credits' );
 				?>
-				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">© 2016 <?php bloginfo( 'name' ); ?></a></span>
+				<span class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">© 2016-2017 <?php bloginfo( 'name' ); ?></a></span>
 			</div><!-- .site-info -->
 
 			<a href="#top" class="gotop-btn"><i class="fa fa-chevron-up"></i></a>
