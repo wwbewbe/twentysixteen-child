@@ -1,0 +1,906 @@
+/*
+ Theme Name:   Twenty Sixteen Child
+ Theme URI:    http://magonote.skr.jp/wp-content/themes/twentysixteen-child/
+ Description:  Twenty Sixteen Child Theme
+ Author:       birdy
+ Author URI:   http://magonote.skr.jp
+ Template:     twentysixteen
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Text Domain:  twentysixteen
+*/
+
+/* -------------------- サイト全体のフォント指定 -------------------- */
+html {
+	font-family: "Roboto", Helvetica, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Mplus 1p", "メイリオ", "Meiryo UI", sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #1a1a1a;
+	font-family: "Roboto", Helvetica, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Mplus 1p", "メイリオ", "Meiryo UI", sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.75;
+}
+
+ins {
+	background: none;
+	text-decoration: none;
+}
+/* -------------------- サイト全体のサイズ -------------------- */
+/* -------------------- ヘッダーのカスタマイズ -------------------- */
+.site-header, .site-content, .site-footer, .post-thumbnail {
+	padding: 0 2%;
+/*    padding-top: 0rem;      /* サイトタイトルの上が広すぎるので */
+/*    padding-bottom: 0rem;   /* サイトタイトルの下が広すぎるので */
+}
+.header-image {
+	margin: 0;
+}
+/* サイトの表示最大横幅 */
+.site-inner {
+    max-width: 1100px;
+}
+.site-branding .site-title {    /* サイトのメインタイトル */
+    font-size: 2.1rem;
+    font-weight: 400;
+    letter-spacing: -0.1rem;    /* 文字間を少し寄せる */
+}
+
+.site-description {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* トグルボタン */
+.menu-toggle {
+	background-color: transparent;
+	border: 1px solid #d1d1d1;
+	color: #1a1a1a;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	margin: 0em 0;
+	padding: 0.769230769em;
+	border-radius: 0.5rem;
+}
+.menu-item {
+	margin-right: 0.3125rem;
+}
+
+/* メインメニュー */
+.main-navigation {
+	font-size: 18px;
+	font-size: 1.125rem;
+}
+.main-navigation a {
+	padding: 0.421875rem 0;
+}
+.dropdown-toggle {
+	height: 24px;
+}
+/* フッター */
+.site-footer .site-title:after {
+    content: none;
+}
+
+/* アーカイブページ上のライン */
+.page-header {
+    border-top: 4px solid #007acc;
+}
+
+/* ヘッダー広告タイトル(スポンサーリンク) */
+.header-ad .widget .widget-title {
+	border-bottom: none !important;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	font-weight: 100;
+	font-size: 0.5rem;
+}
+.header-ad .widget {
+	padding: 0;
+	margin: 0 0 5px;
+}
+
+/* -------------------- トップページ & 記事エリア全体 -------------------- */
+.page-title {
+	font-size: 1.875rem;	/* ページタイトルの文字サイズ */
+	padding: 0.3rem 0 0.3rem 0.3rem;
+    border-radius: 0.3rem;
+    color: #ffffff;
+	background-color: #7eb4d7;
+	margin-bottom: 0.5rem;
+}
+/* 記事エリア全体 */
+.entry-header, .entry-summary, .entry-content, .entry-footer, .page-content, .page-title {
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.page-header {
+	margin: 2%;
+}
+/* トピックスメニュー */
+.top-boxes {
+	padding-right: 2%;
+	padding-left: 2%;
+}
+/* 910px */
+@media screen and (min-width: 56.875em) {
+	.top-boxes {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+/* 710px */
+@media screen and (min-width: 44.375em) {
+	.top-boxes {
+		padding-right: 0;
+		padding-left: 0;
+	}
+}
+.top-box {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 1.3rem;
+	margin-bottom: 1rem;
+	width: 24%;				/* 箱を4個並べる */
+	margin-right: 0;
+	padding: 0;
+}
+.top-box .top-thumbnail {
+	height: 150px;
+	background-size: cover;
+	background-position: 50% 50%;
+	border: thin solid #dcdcdc;
+	margin-bottom: 10px;
+	width: 100%;
+	box-shadow: 2px 2px 1px grey;	/* アイキャッチ画像に影 */
+	-moz-box-shadow:2px 2px 1px #dcdcdc;
+	-webkit-box-shadow: 2px 2px 1px #dcdcdc;
+}
+
+.top-box a {
+	color: black;			/* タイトルは黒にする */
+}
+
+/* -------------------- ウィジェットのカスタマイズ -------------------- */
+.widget {
+    border-style: none;			/* 仕切り線を消す */
+    /*font-size: 1rem;			/* ウィジェット内のフォント大きくする */
+    margin-bottom: 0.5rem;		/* ウィジェットの間隔を狭める */
+}
+
+.widget .widget-title {
+    border-bottom: solid thin #007acc !important;/* タイトルに下青線 */
+    padding-bottom: 0.4rem;				/* 下線までの距離 */
+    margin-bottom: 0.8rem;				/* 最初のエントリーまでの距離 */
+    font-weight: 100;					/* フォントを細くする */
+    font-size: 1rem;
+}
+
+.widget ul {
+    list-style-type: none;		/* リストのマーカーを消す */
+    margin: 0;					/* 注意。サブカテゴリーのインデントも消える */
+    padding: 0;
+}
+
+.widget .cat-item {
+    border-bottom: 1px solid #dcdcdc;/* カテゴリー間に線 */
+    padding: 0.3rem 0rem;		/* カテゴリー間を広げる */
+}
+
+.widget .children .cat-item {
+    border-bottom: none;		/* 親子カテゴリーの間の線はなし */
+    padding: 0.3rem 0rem;		/* カテゴリー間を広げる */
+}
+
+.widget .recentcomments {
+    border-bottom: 1px solid #dcdcdc;	/* コメントの間に線 */
+    padding: 0.5rem 0rem;				/* コメントと線の間 */
+    line-height: 125%;					/* 行間を狭める */
+}
+
+/* -------------------- コメント領域のカスタマイズ -------------------- */
+.comments-title,
+.comment-reply-title,
+.comment-notes,
+.comment-form label,
+.logged-in-as {
+	font-size: 1.0rem;
+	font-weight: 100;
+	border-style: none;		/* 線を削除 */
+}
+
+.comments-title {
+	font-weight: 400;
+}
+
+.comment-form {
+	padding-top: 0.5em;		/* 「コメントを残す」と注意書きの間を狭める */
+}
+
+.comment-notes,
+.comment-form label,
+.logged-in-as {
+	font-size: 0.8rem;		/* 注意書き、ラベルのフォントを小さくする */
+}
+
+input[type="submit"] {
+	font-size: 0.8rem;		/* フォントを小さくする */
+}
+
+p.comment-form-comment,
+p.comment-form-author,
+p.comment-form-email,
+p.comment-form-url,
+p.form-submit {
+	margin-bottom: 0.5em;	/* 項目の間を狭める */
+}
+
+.comments-area {
+	border-top: thin solid #007acc;	/* 領域の上に青線 */
+	padding-bottom: 0.5rem;			/* = 送信ボタンと下線までの距離 */
+	margin-bottom: 2rem;			/* 間を狭める */
+}
+
+.comment-list article {
+	padding: 0.2rem;		/* 周囲との間を狭める */
+}
+
+.comment-metadata {
+	margin-bottom: 0.5rem;	/* コメント日付とコメントの間を小さく */
+}
+
+.comment-reply-link {
+	margin-top: 0.5rem;		/* 「コメント返信」ボタンとコメントの間を小さく */
+}
+
+/* -------------------- ページナビゲーションのカスタマイズ -------------------- */
+.post-navigation,
+.post-navigation .post-title,
+.post-navigation div + div {
+    border-style: none;     /* 前と次の境界線を潰す */
+    font-size: 1.0rem;      /* 前や次が小さいのでまとめて同じ大きさに */
+    font-weight: 400;
+}
+
+div.nav-next {
+    text-align: right;                      /* 「次」は右寄せ */
+}
+
+.post-navigation a,
+.post-navigation .meta-nav {
+    padding: 0rem;                          /* 行間をつぶして狭く */
+    line-height: 1;
+    margin: 0rem;
+}
+
+nav.navigation {
+    border-top: medium solid #007acc;       /* 領域の上下に青線 */
+    /*border-bottom: thin solid #007acc;*/
+    padding: 0.5rem 0;                      /* 線との距離 */
+}
+
+@media (min-width: 599px) {
+	.post-navigation:after {
+		display: block;
+		clear: both;
+	}
+	div.nav-previous {
+		float: left;
+	}
+	div.nav-next {
+		float: none;
+	}
+}
+
+/* -------------------- 記事のカスタマイズ -------------------- */
+.site-main {
+	margin-bottom: 1em;
+}
+.site-main > article {
+	margin-bottom: 2.625em;
+}
+/* 710px */
+@media screen and (min-width: 44.375em) {
+	.site-main {
+	    margin-bottom: 1em;
+	}
+	.site-main > article {
+	    margin-bottom: 2.625em;
+	}
+}
+/* 985px */
+@media screen and (min-width: 61.5625em) {
+	.site-main {
+		margin-bottom: 1em;
+	}
+	.site-main > article {
+		margin-bottom: 2.625em;
+	}
+}
+
+.entry-content p {
+	margin-top: 0;
+	margin-bottom: 0.5rem;
+}
+
+.entry-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: thin solid #007acc;
+}
+
+.entry-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-left: 10px solid #007acc;
+    padding-left: 0.5rem;
+}
+
+.entry-content h4,
+.entry-content h5,
+.entry-content h6
+ {
+    font-size: 1.08rem;
+    font-weight: 600;
+	margin-top: 1.1rem;
+	margin-bottom: 1rem;
+	text-transform: none;
+	letter-spacing: normal;
+}
+
+/*.entry-content h4:before
+{
+	content: '\f069';
+	color: #aaaaaa;
+	font-family: 'FontAwesome';
+}*/
+
+/* Tips */
+.tips {position: relative;
+	margin: 2em 0 1em;
+	font-family: "Menlo", "Roboto", Helvetica, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Mplus 1p", "メイリオ", "Meiryo UI", sans-serif;
+	font-size:14px;
+	background: #eeeeee;
+	box-shadow: 5px 5px 5px #aaaaaa;
+	padding: 20px;
+	margin-bottom: 1em;
+	border-radius: 10px;
+}
+
+.tips:before	{position: absolute;
+			left: 15px;
+			top: -15px;
+			content: '\f08d';
+			z-index: 2;
+			width: 32px;
+			height: 32px;
+			padding-top: 3px;
+			border-radius: 16px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			background-color: #909090;
+			color: #ffffff;
+			font-family: 'FontAwesome';
+			font-size: 26px;
+			line-height: 1;
+			text-align: center}
+
+.tips:after		{position: absolute;
+			left: 32px;
+			top: -8px;
+			z-index: 1;
+			content: 'Tips';
+			padding: 3px 10px 3px 20px;
+			border-radius: 5px;
+			background-color: #909090;
+			color: #ffffff;
+			font-family: Verdana, Helvetica, sans-serif;
+			font-weight: bold;
+			line-height: 1}
+
+/* 補足情報 */
+.point	{position: relative;
+		margin: 2em 0 1em;
+		padding: 25px 20px 20px;
+		border-radius: 10px;
+		background-color: #e6f4ff;
+		box-shadow: 5px 5px 5px #aaaaaa;
+		font-size: 14px;
+		clear: both}
+
+.point:before	{position: absolute;
+			left: 15px;
+			top: -15px;
+			content: '\f0eb';
+			z-index: 2;
+			width: 32px;
+			height: 32px;
+			padding-top: 3px;
+			border-radius: 16px;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			background-color: #0066b3;
+			color: #ffffff;
+			font-family: 'FontAwesome';
+			font-size: 26px;
+			line-height: 1;
+			text-align: center}
+
+.point:after		{position: absolute;
+			left: 32px;
+			top: -8px;
+			z-index: 1;
+			content: 'Point';
+			padding: 3px 10px 3px 20px;
+			border-radius: 5px;
+			background-color: #0066b3;
+			color: #ffffff;
+			font-family: Verdana, Helvetica, sans-serif;
+			font-weight: bold;
+			line-height: 1}
+
+/* 注意書き */
+.attention		{position: relative;
+			margin: 40px 0 30px;
+			padding: 20px;
+			border-radius: 10px;
+			border: dotted 2px #a70d0d;
+			background-color: #fedddd;
+			font-size: 14px;
+			clear: both}
+
+.attention:before	{position: absolute;
+			left: 20px;
+			top: -15px;
+			content: '\f071';
+			background-color: #ffffff;
+			color: #ff0000;
+			font-family: 'FontAwesome';
+			font-size: 26px;
+			line-height: 1}
+
+/* ハイライト */
+.highlight		{background: linear-gradient(transparent 60%, #ffff00 60%);
+			padding: 0 3px}
+
+/* 番号なしリスト */
+.entry-content ul	{list-style: none}
+.entry-content ol	{margin-left: 20px;}
+
+.entry-content li		{position: relative;
+			padding-left: 20px}
+
+.entry-content ul li:before	{position: absolute;
+				left: 0px;
+				top: 3px;
+				content: '\f00c';
+				color: #000000;
+				font-family: 'FontAwesome';
+				line-height: 1
+}
+/* 引用 */
+.entry-content blockquote:not(.alignleft):not(.alignright) {position: relative;
+				margin-left: 0;
+				padding: 20px 50px 1px 50px;
+				border: none;
+				background: #eee;
+				box-shadow: 5px 5px 5px #aaa;
+				color: #444444;
+				font-size: 0.875rem;
+				line-height: 1.8}
+
+.entry-content blockquote:before	{position: absolute;
+				left: 10px;
+				top: 10px;
+				content: '\f10d';
+				color: #aaaaaa;
+				font-size: 30px;
+				font-family: 'FontAwesome';
+				line-height: 1}
+
+.entry-content blockquote:after		{position: absolute;
+				right: 10px;
+				bottom: 10px;
+				content: '\f10e';
+				color: #aaaaaa;
+				font-size: 30px;
+				font-family: 'FontAwesome';
+				line-height: 1}
+
+/* ページネーション矢印修正 */
+.pagination {
+	margin-bottom: 0;
+}
+.pagination:after,
+.pagination:before {
+		background-color: transparent;   /* 黒い長方形を削除 */
+}
+
+.pagination .nav-links:after {
+	font-size: 24px;
+	color: #000000;
+	content: '\f060';
+	font-family: 'FontAwesome';
+}
+.pagination .nav-links:before {
+	font-size: 24px;
+	color: #000000;
+	content: '\f061';
+	font-family: 'FontAwesome';
+}
+
+.pagination .prev,
+.pagination .next,
+.pagination .prev:hover,
+.pagination .next:hover {
+    background-color: transparent;   /* 黒い長方形を削除 */
+}
+
+.pagination .next:before {
+    color: #007acc;                  /* 矢印は青色 */
+	font-size: 24px;
+	content: '\f061';
+	font-family: 'FontAwesome';
+}
+
+.pagination .prev:before {
+    color: #007acc;                  /* 矢印は青色 */
+	font-size: 24px;
+	content: '\f060';
+	font-family: 'FontAwesome';
+}
+
+/* 記事内に表示するタイトル */
+.entry-title {
+	font-size: 1.875rem;
+	font-weight: 600;					/* 少し軽くする。元は700 */
+	padding-top: 1rem;
+	border-bottom: thin dotted #dddddd;
+	border-top: thick solid #007acc;
+	padding-bottom: 0.5rem;             /* 青下線とタイトルの間の距離 */
+}
+/* 記事内に表示する抜粋の文字サイズ */
+body:not(.search-results) .entry-summary {
+	font-size: 1.25rem;
+}
+/* 投稿日・更新日・カテゴリ・タグの表示 */
+.entry-footer .posted-on .published,
+.updated:not(.published),
+body:not(.search-results) .cat-links,
+body:not(.search-results) .tags-links,
+body:not(.search-results) article:not(.sticky) .posted-on {
+	display: inline;
+	margin-right: 0.3125rem;
+}
+
+body:not(.search-results) article:not(.type-page) .entry-footer {
+	float: none;
+	width: auto;
+}
+body:not(.search-results) article:not(.type-page) .entry-content {
+	float: none;
+    width: auto;                         /* 本文の幅 */
+}
+.entry-footer {
+	font-size: 0.875rem;
+	margin-bottom: 0.625rem;
+}
+.entry-footer .posted-on .published:before {
+	content: '\f040';
+	font-family: 'FontAwesome';
+	margin-right: 0.125rem;
+}
+.entry-footer .posted-on .updated:before {
+	content: '\f044';
+	font-family: 'FontAwesome';
+	margin-right: 0.125rem;
+}
+
+/*body:not(.search-results) .cat-links a {*/
+.cat-links a {                /* タイトル下のカテゴリーは青色丸四角で囲む */
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.3rem;
+    color: #ffffff;
+	background-color: #75dbe7;
+}
+/*body:not(.search-results) .cat-links a:hover {*/
+.cat-links a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	background-color: #94ecf6;
+}
+
+/* -------------------- ウィジェット -------------------- */
+.sidebar {
+	padding: 0 2%;
+}
+/* 910px */
+@media screen and (min-width: 56.875em) {
+	.sidebar {
+	    padding: 0;
+	}
+}
+/* 検索フォーム */
+.widget input[type="search"].search-field	{width: 100%;
+			height: 44px;
+			padding: 3px;
+			border: solid 2px #dddddd;
+			border-radius: 0;
+			background-image: none;
+			font-family: inherit;
+			font-size: 14px;
+			-webkit-appearance: none;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box}
+
+.search-submit
+			{display: block;
+			visibility: hidden;
+			height: 0}
+
+/* タグクラウド */
+.tagcloud a	{display: inline-block;
+			color: #2288bb;
+			text-decoration: none}
+
+/* 最新の記事 */
+.thumbnailed-article {
+		border-bottom: 1px solid #dcdcdc;
+		padding: 0.5rem 0;
+		line-height: 125%;
+		display: flex;
+}
+
+.thumbnailed-area {
+		width: 100px;
+		text-align: center;
+		margin-right: 0.3rem;
+}
+
+.thumbnailed-date {
+		font-weight: 100;
+		font-size: 0.9rem;
+}
+
+/* おすすめ記事（サムネイル画像に文字を重ねたリスト） */
+.pickup-article {
+		position: relative;
+		margin: 0 0 0.625rem;
+		padding: 0;
+}
+
+.pickup-article a:hover {
+		opacity: 0.8;
+}
+.pickup-article a {
+		text-decoration: none;
+		color: #ffffff;
+}
+
+.pickup-article .pickup-thumbnail {
+		width: 100%;
+		height: 100px;
+		background-size: cover;
+		background-position: 50% 50%;
+}
+
+.pickup-article .pickup-content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 5px 10px;
+		background-color: rgba(0,0,0,0.5);
+		font-size: 12px;
+		-moz-box-siging: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+}
+
+/* -------------------- 投稿一覧表示のスタイル -------------------- */
+.post-summary .entry-title {
+	font-size: 1.4375rem;
+	font-weight: 600;					/* 少し軽くする。元は700 */
+	padding-top: 1rem;
+	border-top: none;
+	border-bottom: thin solid #007acc;	/* 青い下線 */
+	padding-bottom: 0.5rem;				/* 青下線とタイトルの間の距離 */
+	margin-bottom: 0.5rem;				/* 青下線の下の距離 */
+}
+.summary-thumbnail .post-thumbnail {
+		float: left;
+		width: 25%;			/*アイキャッチ画像は左側 20%*/
+		min-width: 100px;
+		margin: 0rem 0.5rem 0.5rem 2%;
+		text-align: center;	/*アイキャッチ画像が正方形でない場合*/
+}
+
+/* 910px */
+@media screen and (min-width: 56.875em) {
+	.summary-thumbnail .post-thumbnail {
+		margin-left: 0;		/* 左余白を一定に確保するたね */
+	}
+}
+
+.summary-thumbnail img {
+		/*border: solid thin #d3d3d3;		/*アイキャッチ画像に枠線*/
+		/*box-shadow: 2px 2px 1px grey;		/*アイキャッチ画像に影
+		-moz-box-shadow:2px 2px 1px #aedaf2;
+		-webkit-box-shadow: 2px 2px 1px #aedaf2;*/
+}
+
+/* -------------------- プロフィール -------------------- */
+.widget .author-title {         /* 名前 */
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.author-info {                  /* 説明 */
+    padding-top: 0.5rem;
+    margin-bottom: 1.0rem;
+    border-style: none;
+    display: flex;
+}
+
+.author-avatar {
+    text-align: center;         /* アバター画像等を中央揃え */
+}
+
+.author-avatar .avatar {        /* アバター画像の大きさ */
+    width: 80px;
+    height: 80px;
+    margin: 0 10px 5px 10px;
+}
+
+/* -------------------- SNSボタン -------------------- */
+.share-btn		{
+		margin: 2rem 7.6923% 2.947368421em;
+		clear: both}
+
+.share-btn ul		{margin: 0;
+		padding: 0;
+		list-style: none}
+
+.share-btn li a		{display: block;
+		padding: 0.3125rem 0.625rem 0.3125rem 0.3125rem;
+		border-radius: 10px;
+		color: #ffffff;
+		font-size: 0.875rem;
+		text-decoration: none}
+
+.share-btn li a:hover	{opacity: 0.8}
+
+.share-btn ul:after	{content: "";
+		display: block;
+		clear: both}
+
+.share-btn li		{
+		float: left;
+		width: auto;
+		margin-right: 0.1875rem;
+		padding-left: 0;
+}
+
+.share-btn li:before {
+	display: none;
+}
+
+.share-tw		{background-color: #55acee}
+.share-fb		{background-color: #3b5998}
+.share-gp		{background-color: #dd4b39}
+.share-line		{background-color: #00b900}
+
+@media (max-width: 599px) {
+	.share-btn span	{
+			display: inline-block;
+			text-indent: -9999px;
+	}
+
+	.share-btn li a		{
+			padding: 0.3125rem 0.625rem 0.3125rem 0.3125rem;
+	}
+}
+
+/* -------------------- 画像 -------------------- */
+/* 画像のキャプション */
+.wp-caption-text		{margin: 0;
+				color: #666666;
+				font-size: 10px;
+				text-align: center}
+
+.wp-caption-text a	{color: #666666}
+
+/* 画像の配置 */
+.aligncenter		{display: block;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				margin-left: auto;
+				margin-right: auto}
+
+@media (max-width: 599px) {
+	.wp-caption .wp-caption-text {font-size: 10px}
+	.alignleft, .alignright
+				{display: block;
+				margin-top: 30px;
+				margin-bottom: 30px;
+				margin-left: auto;
+				margin-right: auto}
+}
+
+@media (min-width: 600px) {
+	.alignleft		{float: left;
+				margin-top: 10px;
+				margin-bottom: 20px;
+				margin-right: 30px}
+
+	.alignright		{float: right;
+				margin-top: 10px;
+				margin-bottom: 20px;
+				margin-left: 30px}
+}
+/* アイキャッチ画像 */
+.catch			{margin-top: 30px;
+				margin-bottom: 30px}
+
+/* -------------------- 外部コンテンツ -------------------- */
+iframe			{max-width: 100%}
+
+/* YouTubeのビデオ */
+.ytvideo			{position: relative;
+				width: 100%;
+				height: 0;
+				padding-top: 56.25%;
+				overflow: hidden;
+				margin-top: 30px;
+				margin-bottom: 30px}
+
+.ytvideo iframe		{position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%}
+
+/* ビデオ */
+.wp-video			{margin-top: 30px;
+				margin-bottom: 30px}
+
+/* -------------------- トップへ戻るボタン -------------------- */
+.gotop-btn {
+		position: fixed;
+		bottom: 40px;
+		right: 40px;
+		width: 45px;
+		height: 45px;
+		line-height: 1rem;
+		display: block;
+		background-color: rgba(102, 102, 102, 0.7);
+		text-align: center;
+		color: #ffffff;
+		font-size: 21px;
+		text-decoration: none;
+		padding: 10px;
+		cursor: pointer;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		-webkit-transition:all 0.3s ;
+		-moz-transition:all 0.3s ;
+		transition:all 0.3s ;
+}
+.gotop-btn:hover {
+		opacity: 0.85 ;
+/*		background-color: #afafaf;
+		color: #ffffff;
+		text-decoration: none;*/
+}
