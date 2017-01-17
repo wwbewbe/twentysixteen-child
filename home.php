@@ -82,5 +82,10 @@ get_header(); ?>
 
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
+
+	<div class="header-ad">
+		<?php dynamic_sidebar( 'header-ad' ); // Adsense ?>
+	</div><!-- .header-ad -->
+
 <?php get_footer(); ?>
