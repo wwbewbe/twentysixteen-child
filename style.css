@@ -287,6 +287,10 @@ nav.navigation {
     padding: 0.5rem 0;                      /* 線との距離 */
 }
 
+nav.navigation.post-navigation {
+    margin-bottom: 2em;
+}
+
 @media (min-width: 599px) {
 	.post-navigation:after {
 		display: block;
