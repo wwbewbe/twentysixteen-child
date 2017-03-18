@@ -14,7 +14,20 @@
 		<section class="widget latest-posts">
 			<h2 class="widget-title">最新記事</h2>
 			<?php
-			$args = array( 'posts_per_page' => 5 );
+			$args = array( 'posts_per_page' => 5, 'category__not_in' => '39' );
+			$postslist = get_posts( $args );
+			foreach ($postslist as $post):
+			setup_postdata( $post );
+			the_thumbnailed_article();
+			endforeach;
+			wp_reset_postdata();
+			?>
+		</section>
+
+		<section class="widget latest-posts">
+			<h2 class="widget-title">最近の「柿の種」</h2>
+			<?php
+			$args = array( 'posts_per_page' => 3, 'category_name' => 'kakinotane' );
 			$postslist = get_posts( $args );
 			foreach ($postslist as $post):
 			setup_postdata( $post );
