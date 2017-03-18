@@ -40,7 +40,9 @@ get_header(); ?>
 		</div><!-- .top-boxes -->
 
 		<h2 class="page-title">Blog</h2>
-		<?php if ( have_posts() ) : ?>
+		<?php $args = array( 'category__not_in' => '39');
+		$the_query = new WP_Query( $args ); ?>
+		<?php if ( $the_query->have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
 				<header>
@@ -50,16 +52,13 @@ get_header(); ?>
 
 			<?php
 			// Start the loop.
-			while ( have_posts() ) : the_post();
-
-				if ( !in_category( '39' ) ) :
+			while ( $the_query->have_posts() ) : $the_query->the_post();
 					/*
 					 * Include the Post-Format-specific template for the content.
 					 * If you want to override this in a child theme, then include a file
 					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 					 */
 					get_template_part( 'template-parts/content', get_post_format() );
-				endif;
 			// End the loop.
 			endwhile;
 
@@ -78,7 +77,7 @@ get_header(); ?>
 
 		get_template_part('snsbtn'); // add SNS button
 		?>
-
+		<?php wp_reset_postdata(); ?>
 		</main><!-- .site-main -->
 
 	</div><!-- .content-area -->
