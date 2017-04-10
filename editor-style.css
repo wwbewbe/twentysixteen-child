@@ -40,6 +40,13 @@
 	letter-spacing: normal;
 }
 
+.mceContentBody h4
+{
+	margin-top: 2rem;
+	padding-bottom: 3px;
+	border-bottom: thin solid #007acc;	/* 青い下線 */
+}
+
 .mceContentBody h4:before
 {
 /*	content: '\f069';

@@ -360,6 +360,13 @@ nav.navigation.post-navigation {
 	letter-spacing: normal;
 }
 
+.entry-content h4
+{
+	margin-top: 2rem;
+	padding-bottom: 3px;
+	border-bottom: thin solid #007acc;	/* 青い下線 */
+}
+
 /*.entry-content h4:before
 {
 	content: '\f069';
