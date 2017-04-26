@@ -205,7 +205,7 @@ function twentysixteen_post_thumbnail() {
 		return;
 	}
 
-	if ( is_singular() ) :
+	if ( is_singular( 'post' ) ) :
 	?>
 
 	<?php
