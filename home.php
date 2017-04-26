@@ -28,7 +28,7 @@ get_header(); ?>
 		if( $myposts ): ?>
 
 			<?php foreach($myposts as $post):
-			if($post->object == 'post'):
+			if(( $post->object == 'post' ) || ( $post->object == 'page' )):
 			$post = get_post( $post->object_id );
 			setup_postdata($post); ?>
 				<?php the_top_thumbnailed_article(); ?>

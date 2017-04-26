@@ -318,3 +318,17 @@ function my_theme_catexcept($cat_args){
     return $cat_args;
 }
 add_filter('widget_categories_args', 'my_theme_catexcept',10);
+
+// リストを表示するショートコード
+function set_list($params = array()) {
+    extract(shortcode_atts(array(
+        				'file'		=>	'list',	//表示に使用するPHPファイル
+						'tagname'	=>	0,			//表示するタグ名
+						'catname'	=>	0,			//表示するカテゴリー名
+						'num'		=>	10,			//表示するリスト数
+    					), $params));
+    ob_start();
+    include( STYLESHEETPATH . "/$file.php" );
+    return ob_get_clean();
+}
+add_shortcode('list', 'set_list');
