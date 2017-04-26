@@ -27,7 +27,7 @@
 		<section class="widget latest-posts">
 			<h2 class="widget-title">最近ゲットした「柿の種」</h2>
 			<?php
-			$args = array( 'posts_per_page' => 3, 'category_name' => 'kakinotane' );
+			$args = array( 'posts_per_page' => 4, 'category_name' => 'kakinotane' );
 			$postslist = get_posts( $args );
 			foreach ($postslist as $post):
 			setup_postdata( $post );
