@@ -52,7 +52,7 @@
 	  <meta property="og:title" content="<?php the_title(); ?>">
 	  <meta property="og:url" content="<?php the_permalink(); ?>">
 	  <meta property="og:description" content="<?php echo esc_attr( wp_trim_words( $post->post_excerpt, 200, '…' ) ); ?>">
-	  <meta property="og:image" content="<?php echo get_thumbnail_url( 'large' ); ?>">
+	  <meta property="og:image" content="<?php echo get_thumb( 'large' ); ?>">
 	<?php endif; //記事の個別ページ用のメタデータ【ここまで】?>
 
 	<?php if( is_category() || is_tag() ): // カテゴリー・タグページ用のメタデータ ?>
@@ -85,6 +85,17 @@
 	<meta property="og:locale:alternate" content="en_US">
 	<meta property="og:locale:alternate" content="en_GB">
 	<meta property="og:locale:alternate" content="zh_TW">
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-75719561-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
 
 	<?php wp_head(); ?>
 </head>
