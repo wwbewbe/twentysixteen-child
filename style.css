@@ -921,6 +921,7 @@ body:not(.search-results) article:not(.type-page) .entry-content {
 /* タグクラウド */
 
 .tagcloud a {
+	font-family: -apple-system, BlinkMacSystemFont, "メイリオ", Meiryo, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", Roboto, sans-serif;
 	display: inline-block;
 	color: #2288bb;
 	text-decoration: none
