@@ -1129,6 +1129,25 @@ body:not(.search-results) article:not(.type-page) .entry-content {
 	}
 }
 
+.sns-wrap {
+  text-align: left;
+  margin: 10px 0;
+}
+
+.sns-wrap > li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 5px;
+  line-height: 1;
+}
+
+.sns-wrap > li:first-child {
+  margin-left: 0;
+}
+
+.sns-wrap > li:last-child {
+  margin-right: 0;
+}
 
 /* -------------------- 画像 -------------------- */
 
