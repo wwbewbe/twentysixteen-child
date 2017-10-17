@@ -58,9 +58,9 @@ register_nav_menu( 'pickupnav', 'Pickup Posts' );	//おすすめ記事
 register_nav_menu( 'topicnav', 'Topic Posts' );		//トピック記事
 
 function showads() {
-	$title = '<div style="font-size:8px">スポンサーリンク</div>';
+	$title = '<div style="font-size:7px">スポンサーリンク</div>';
 	$shortad = '<';
-	$adcode = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	$adcode = '<div style="margin-bottom:20px;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <ins class="adsbygoogle"
      style="display:block; text-align:center;"
      data-ad-layout="in-article"
@@ -69,7 +69,7 @@ function showads() {
      data-ad-slot="2703921407"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>';
+</script></div>';
 
     return $title.$adcode;
 }
