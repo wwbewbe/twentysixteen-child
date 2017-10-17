@@ -61,13 +61,14 @@ function showads() {
 	$title = '<div style="font-size:8px">スポンサーリンク</div>';
 	$shortad = '<';
 	$adcode = '<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- magonote-本文下 -->
 <ins class="adsbygoogle"
-     style="display:inline-block;width:300px;height:250px"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
      data-ad-client="ca-pub-6212569927869845"
-     data-ad-slot="4342281613"></ins>
+     data-ad-slot="2703921407"></ins>
 <script>
-(adsbygoogle = window.adsbygoogle || []).push({});
+     (adsbygoogle = window.adsbygoogle || []).push({});
 </script>';
 
     return $title.$adcode;
