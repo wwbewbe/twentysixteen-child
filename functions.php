@@ -212,7 +212,7 @@ function twentysixteen_post_thumbnail() {
 	<?php
 	if (has_post_thumbnail()) {
 		printf('<div class="post-thumbnail">');
-		the_post_thumbnail(array('400,400'));
+		the_post_thumbnail(array('700,400'));
 		printf('</div><!-- .post-thumbnail -->');
 	} else {
 		return;
@@ -224,9 +224,9 @@ function twentysixteen_post_thumbnail() {
 	<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true">
 		<?php
 		if (has_post_thumbnail()) {
-			the_post_thumbnail( 'medium', array( 'alt' => the_title_attribute( 'echo=0' ) ) );
+			the_post_thumbnail( 'full', array( 'alt' => the_title_attribute( 'echo=0' ) ) );
 		} else {
-			$thumbnail = get_thumb('medium');
+			$thumbnail = get_thumb('full');
 			$alt = the_title_attribute( 'echo=0' );
 			printf('<img src="'.$thumbnail.'" alt="'.$alt.'">');
 		}
