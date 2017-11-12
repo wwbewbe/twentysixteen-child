@@ -33,7 +33,7 @@
 	  <meta property="og:title" content="<?php bloginfo( 'name' ); ?>">
 	  <meta property="og:url" content="<?php echo esc_url(home_url( '/' )); ?>">
 	  <meta property="og:description" content="<?php bloginfo( 'description' ); ?>">
-	  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/site-top.png">
+	  <meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/site-top.jpg">
 	<?php endif; // トップページ用のメタデータ【ここまで】 ?>
 
 	<?php if( ( is_single() || is_page() ) && ( !is_front_page() ) ): //記事の個別ページ用のメタデータ ?>
@@ -77,7 +77,7 @@
 	  <meta property="og:title" content="<?php echo esc_html__( 'Posts related to ', 'gachafan' ); ?><?php single_term_title(); ?> | <?php bloginfo( 'name' ); ?>">
 	  <meta property="og:url" content="<?php echo get_term_link( $termid, $taxname ); ?>">
 	  <meta property="og:description" content="<?php echo esc_html__( 'This list is about posts on ', 'gachafan' ); ?><?php single_term_title(); ?>">
-	  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/img/site-top.png">
+	  <meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/site-top.jpg">
 	<?php endif; // カテゴリ・タグページ用のメタデータ【ここまで】 ?>
 
 	<meta property="og:site_name" content="<?php bloginfo( 'name' ); ?>">
@@ -85,6 +85,8 @@
 	<meta property="og:locale:alternate" content="en_US">
 	<meta property="og:locale:alternate" content="en_GB">
 	<meta property="og:locale:alternate" content="zh_TW">
+
+	<link rel="shortcut icon" type="image/x-icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" />
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
