@@ -121,7 +121,7 @@
 	<?php endif; ?>
 
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
-
+	<script type="text/javascript" src="https://b.st-hatena.com/js/bookmark_button.js" charset="utf-8" async="async"></script>
 	<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
 
 	<?php wp_head(); ?>
