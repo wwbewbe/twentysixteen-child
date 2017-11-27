@@ -32,7 +32,7 @@
 	      <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
 	    </li>
 	    <li>
-	      <div class="fb-like" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+	      <div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
 	    </li>
 	    <li>
 	      <div class="g-plusone" data-size="medium" data-annotation="none"></div>
