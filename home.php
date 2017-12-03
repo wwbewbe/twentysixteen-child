@@ -46,7 +46,12 @@ get_header(); ?>
 		<?php endif; ?>
 
 		<h2 class="page-title">Blog</h2>
-		<?php $args = array( 'category__not_in' => '39');
+		<?php
+		$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
+		$args = array(
+			'category__not_in' => '39',
+			'paged' => $paged,
+		);
 		$the_query = new WP_Query( $args ); ?>
 		<?php if ( $the_query->have_posts() ) : ?>
 
