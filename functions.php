@@ -303,6 +303,15 @@ register_sidebar( array(
 	'before_title' => '<h2 class="widget-title">',
 	'after_title' => '</h2>'
 ) );
+register_sidebar( array(
+	'id' => 'footer-ad',
+	'name' => 'FooterAdMenu',
+	'description' => 'setting adsense menu widget on footer.',
+	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	'after_widget' => '</section>',
+	'before_title' => '<h2 class="widget-title">',
+	'after_title' => '</h2>'
+) );
 
 /* 検索フォーム */
 add_theme_support( 'html5', array( 'search-form' ) );

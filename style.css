@@ -60,6 +60,10 @@ img{
 	padding: 0 2%;
 }
 
+.site-header-main {
+	/*display: block;*/
+}
+
 .header-image {
 	margin: 0;
 }
@@ -121,7 +125,9 @@ img{
 
 
 /* フッター */
-
+.site-footer {
+	display: block;
+}
 .site-footer .site-title:after {
 	content: none;
 }
@@ -136,7 +142,8 @@ img{
 
 /* ヘッダー広告タイトル(スポンサーリンク) */
 
-.header-ad .widget .widget-title {
+.header-ad .widget .widget-title,
+.footer-ad .widget .widget-title{
 	border-bottom: none !important;
 	padding-bottom: 0;
 	margin-bottom: 0;
@@ -144,11 +151,14 @@ img{
 	font-size: 0.5rem;
 }
 
-.header-ad .widget {
+.header-ad .widget{
 	padding: 0;
 	margin: 0 0 5px;
 }
-
+.footer-ad .widget{
+	padding: 0;
+	margin: 0 0 20px;
+}
 
 /* -------------------- トップページ & 記事エリア全体 -------------------- */
 
@@ -159,6 +169,7 @@ img{
 	border-radius: 0.3rem;
 	color: #ffffff;
 	background-color: #7eb4d7;
+	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
 
@@ -169,8 +180,7 @@ img{
 .entry-summary,
 .entry-content,
 .entry-footer,
-.page-content,
-.page-title {
+.page-content {
 	margin-right: 2%;
 	margin-left: 2%;
 }
@@ -450,7 +460,7 @@ nav.navigation {
 }
 
 nav.navigation.post-navigation {
-	margin-bottom: 2em;
+	margin-bottom: 20px;
 }
 
 @media (min-width: 599px) {
@@ -533,17 +543,21 @@ nav.navigation.post-navigation {
 .entry-content h4 {
 	margin-top: 2rem;
 	padding-bottom: 3px;
-	/* 青い下線 */
-	border-bottom: thin solid #007acc;
+}
+.entry-content h4::before {
+  font-family: 'FontAwesome';
+  content: '\f0c8';
+  padding-right: 10px;
+  color: #007acc;
 }
 
-
-/*.entry-content h4:before
-{
-	content: '\f069';
-	color: #aaaaaa;
-	font-family: 'FontAwesome';
-}*/
+.entry-content h2:focus,
+.entry-content h3:focus,
+.entry-content h4:focus,
+.entry-content h5:focus,
+.entry-content h6:focus {
+	outline: none;
+}
 
 
 /* Tips */
@@ -696,7 +710,7 @@ nav.navigation.post-navigation {
 	padding-left: 20px
 }
 
-.entry-content ul li:before {
+/*.entry-content ul li:before {
 	position: absolute;
 	left: 0px;
 	top: 3px;
@@ -704,7 +718,7 @@ nav.navigation.post-navigation {
 	color: #000000;
 	font-family: 'FontAwesome';
 	line-height: 1
-}
+}*/
 
 
 /* 引用 */
@@ -846,13 +860,13 @@ body:not(.search-results) article:not(.type-page) .entry-content {
 }
 
 .entry-footer .posted-on .published:before {
-	content: '\f040';
+	content: '\f017';
 	font-family: 'FontAwesome';
 	margin-right: 0.125rem;
 }
 
 .entry-footer .posted-on .updated:before {
-	content: '\f044';
+	content: '\f1da';
 	font-family: 'FontAwesome';
 	margin-right: 0.125rem;
 }

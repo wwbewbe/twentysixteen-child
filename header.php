@@ -180,9 +180,11 @@
 				</div><!-- .header-image -->
 			<?php endif; // End header image check. ?>
 
-			<div class="header-ad">
-				<?php dynamic_sidebar( 'header-ad' ); // Adsense ?>
-			</div><!-- .header-ad -->
+			<?php if ( is_active_sidebar( 'header-ad' ) ) : ?>
+				<div class="header-ad">
+					<?php dynamic_sidebar( 'header-ad' ); // Adsense ?>
+				</div><!-- .header-ad -->
+			<?php endif; ?>
 		</header><!-- .site-header -->
 
 		<div id="content" class="site-content">

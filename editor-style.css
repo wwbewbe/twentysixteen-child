@@ -44,15 +44,12 @@
 {
 	margin-top: 2rem;
 	padding-bottom: 3px;
-	border-bottom: thin solid #007acc;	/* 青い下線 */
 }
-
-.mceContentBody h4:before
-{
-/*	content: '\f069';
-	color: #aaaaaa;
-	font-family: 'FontAwesome';
-*/
+.mceContentBody h4:before {
+  font-family: 'FontAwesome';
+  content: '\f0c8';
+  padding-right: 10px;
+  color: #007acc;
 }
 
 /* Tips */
@@ -172,14 +169,15 @@
 .mceContentBody ul li		{position: relative;
 			padding-left: 20px}
 
-.mceContentBody ul li:before	{position: absolute;
-				left: 0px;
-				top: 3px;
-				content: '\f00c';
-				color: #000000;
-				font-family: 'FontAwesome';
-				line-height: 1;
-}
+/*.mceContentBody ul li:before	{
+	position: absolute;
+	left: 0px;
+	top: 3px;
+	content: '\f00c';
+	color: #000000;
+	font-family: 'FontAwesome';
+	line-height: 1;
+}*/
 
 /* 引用 */
 .mceContentBody blockquote:not(.alignleft):not(.alignright) {position: relative;
