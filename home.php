@@ -39,6 +39,12 @@ get_header(); ?>
 		endif; ?>
 		</div><!-- .top-boxes -->
 
+		<?php if ( is_active_sidebar( 'front-ad1' ) ) : ?>
+			<div class="front-ad1">
+				<?php dynamic_sidebar( 'front-ad1' ); // Adsense ?>
+			</div><!-- .header-ad -->
+		<?php endif; ?>
+
 		<h2 class="page-title">Blog</h2>
 		<?php $args = array( 'category__not_in' => '39');
 		$the_query = new WP_Query( $args ); ?>
@@ -79,6 +85,12 @@ get_header(); ?>
 		?>
 		<?php wp_reset_postdata(); ?>
 		</main><!-- .site-main -->
+
+		<?php if ( is_active_sidebar( 'front-ad2' ) ) : ?>
+			<div class="front-ad2">
+				<?php dynamic_sidebar( 'front-ad2' ); // Adsense ?>
+			</div><!-- .header-ad -->
+		<?php endif; ?>
 
 	</div><!-- .content-area -->
 

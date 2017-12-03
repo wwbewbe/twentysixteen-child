@@ -312,6 +312,24 @@ register_sidebar( array(
 	'before_title' => '<h2 class="widget-title">',
 	'after_title' => '</h2>'
 ) );
+register_sidebar( array(
+	'id' => 'front-ad1',
+	'name' => 'FrontAd1',
+	'description' => 'setting adsense menu widget on front page.',
+	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	'after_widget' => '</section>',
+	'before_title' => '<h2 class="widget-title">',
+	'after_title' => '</h2>'
+) );
+register_sidebar( array(
+	'id' => 'front-ad2',
+	'name' => 'FrontAd2',
+	'description' => 'setting adsense menu widget on front page.',
+	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	'after_widget' => '</section>',
+	'before_title' => '<h2 class="widget-title">',
+	'after_title' => '</h2>'
+) );
 
 /* 検索フォーム */
 add_theme_support( 'html5', array( 'search-form' ) );
