@@ -62,6 +62,7 @@ img{
 
 .site-header-main {
 	/*display: block;*/
+	background: url('img/back.png') 160px 160px;
 }
 
 .header-image {
