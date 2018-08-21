@@ -101,6 +101,14 @@
 
 	</script>
 
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script>
+	     (adsbygoogle = window.adsbygoogle || []).push({
+	          google_ad_client: "ca-pub-6212569927869845",
+	          enable_page_level_ads: true
+	     });
+	</script>
+
 </head>
 
 <body <?php body_class(); ?> oncontextmenu="return false;">
